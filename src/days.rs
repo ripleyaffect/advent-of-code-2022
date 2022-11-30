@@ -33,7 +33,7 @@ pub fn get_answer(day: u8, part: u8) -> String {
     let get_part = days.get(&day);
 
     if let None = get_part {
-        return format!("No day {}, exiting", day);
+        return format!("No day {}. Enter a number between 1 and 25 (inclusive)", day);
     }
 
     get_part.unwrap()(part).to_string()
