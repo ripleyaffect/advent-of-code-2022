@@ -1,6 +1,7 @@
 #![allow(dead_code)]
 
 mod days;
+mod utils;
 
 use clap::Parser;
 
