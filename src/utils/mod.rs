@@ -1,3 +1,5 @@
+use std::hash::Hash;
+use std::collections::HashSet;
 use std::fs;
 
 pub fn read_input_lines(day: &str) -> Vec<String> {
@@ -12,4 +14,13 @@ pub fn read_input_lines(day: &str) -> Vec<String> {
 
 pub fn read_input_string(day: &str) -> String {
     fs::read_to_string(format!("src/days/day_{}/input.txt", day)).unwrap()
+}
+
+pub fn set_intersection<T: Eq + Hash>(sets: &mut Vec<HashSet<T>>) -> &mut HashSet<T> {
+    let (intersection, others) = sets.split_at_mut(1);
+    let intersection = &mut intersection[0];
+    for other in others {
+        intersection.retain(|e| other.contains(e));
+    }
+    intersection
 }
