@@ -13,7 +13,7 @@ pub fn read_input_lines(day: &str) -> Vec<String> {
 }
 
 pub fn read_input_string(day: &str) -> String {
-    fs::read_to_string(format!("src/days/day_{}/input.txt", day)).unwrap()
+    fs::read_to_string(format!("src/days/day_{day}/input.txt")).unwrap()
 }
 
 pub fn set_intersection<T: Eq + Hash>(sets: &mut Vec<HashSet<T>>) -> &mut HashSet<T> {

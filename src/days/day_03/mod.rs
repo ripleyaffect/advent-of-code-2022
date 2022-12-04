@@ -14,8 +14,8 @@ fn part_1() -> i32 {
 
     let mut sum = 0;
     for line in input_lines {
-        let mut arr = line.chars().collect::<Vec<char>>();
-        let chunks: Vec<Vec<char>> = arr.chunks(arr.len() / 2).map(|s| s.into()).collect();
+        let chars = line.chars().collect::<Vec<char>>();
+        let chunks: Vec<Vec<char>> = chars.chunks(chars.len() / 2).map(|s| s.into()).collect();
 
         let mut sets: Vec<HashSet<char>>  = vec![
             HashSet::from_iter(chunks[0].clone()),
