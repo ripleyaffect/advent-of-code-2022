@@ -1,3 +1,5 @@
+use crate::utils;
+
 pub fn get_part(part: u8) -> i32 {
     match part {
         1 => part_1(),
@@ -6,6 +8,14 @@ pub fn get_part(part: u8) -> i32 {
     }
 }
 
-fn part_1() -> i32 { 0 }
+fn part_1() -> i32 {
+    let input_lines = utils::read_input_lines("19");
 
-fn part_2() -> i32 { 0 }
+    0
+}
+
+fn part_2() -> i32 {
+    let input_lines = utils::read_input_lines("19");
+
+    0
+}
